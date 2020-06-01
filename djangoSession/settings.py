@@ -118,4 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# 스태틱파일 URL
 STATIC_URL = '/static/'
+# 이곳에 스태틱 파일 루트 폴더 경로 지정
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# blog 앱의 static 폴더 경로 지정
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'blog', 'static'),
+)
